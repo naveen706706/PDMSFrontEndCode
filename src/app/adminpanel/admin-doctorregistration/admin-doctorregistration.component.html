@@ -1,0 +1,73 @@
+<nav class="navbar fixed-top navbar-dark bg-success">
+  <div style="margin-left:20px ;" ></div>
+  <a class="navbar-brand" href="#">Prescription Drug Management System</a>
+  <div style="margin-left:700px ;" ></div>
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home </a>
+    </li>
+  </ul>
+  <div style="margin-left:20px ;" ></div>
+</nav>
+<br>
+<br>
+<body>
+  <div class="container">
+    <div class="title">Doctor Registration Form</div>
+    <div class="content">
+      <form #myForm="ngForm" (submit)="submitdoctormethod(myForm)" ngNativeValidate>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details"> Name</span>
+            <input type="text" placeholder="Enter your name" name="name" [(ngModel)]="nameh" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" name="username" [(ngModel)]="usernameh" required>
+          </div>
+          <div class="input-box">
+            <span class="details">password</span>
+            <input type="text" placeholder="Enter your password" name="password" [(ngModel)]="passwordh" required>
+          </div>
+          <div class="input-box">
+            <span class="details">hospital</span>
+            <!-- <input type="text" placeholder="Enter your hospital" name="hospital" [(ngModel)]="hospitalh" required> -->
+            <select name="hospital"  class="field" [(ngModel)]="hospitalh" required>
+              <option value="" disabled selected hidden >select Hospital</option>
+              <option value="yalenewhavenhospital"> yale new haven hospital </option>
+              <option value="bridgeporthospital">  bridgeport hospital  </option>
+               <option value="hartfordhospital"> hartford hospital  </option>
+               <option value="johnhopkinshospital"> john hopkins hospital  </option>
+               <option value="dukeuniversityhospital"> duke university hospital  </option>
+               <option value="Stanfordhospital"> Stanford hospital  </option>
+               <option value="Harvardhospital">  Harvard hospital  </option>
+           </select>
+          </div>
+          <div class="input-box">
+            <span class="details">specialization</span>
+            <select id="stream"  class="field" name="specialization"  [(ngModel)]="specializationh" required >
+              <option value="" disabled  selected hidden >  Select Streams </option>
+              <option value="gynaecologist" >  gynaecologist </option>
+              <option value="Dentists" >  Dentists </option>
+              <option value="Audiologists" >  Audiologists </option>
+              <option value="Cardiologists" >  Cardiologists </option>
+              <option value="Neurologists" >   Neurologists </option>						
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Experiance</span>
+            <input type="text" placeholder="Enter your Experiance" name="Experiance" [(ngModel)]="experiance" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Location</span>
+            <input type="text" placeholder="Enter your Location" name="Location" [(ngModel)]="locationh" required>
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register" name="submitbutton" >
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

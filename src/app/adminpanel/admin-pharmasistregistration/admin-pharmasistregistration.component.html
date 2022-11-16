@@ -1,0 +1,48 @@
+<nav class="navbar fixed-top navbar-dark bg-success">
+  <div style="margin-left:20px ;" ></div>
+  <a class="navbar-brand" href="#">Prescription Drug Management System</a>
+  <div style="margin-left:700px ;" ></div>
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home </a>
+    </li>
+  </ul>
+  <div style="margin-left:20px ;" ></div>
+</nav>
+<br>
+<br>
+
+<div class="box1" >
+  <div class="container">
+    <div class="title">Pharmasist Registration Form</div>
+    <div class="content">
+      <form #myForm="ngForm" (submit)="submitpharmaobject(myForm)" ngNativeValidate>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" [(ngModel)]="nameh" name="name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" [(ngModel)]="usernameh" name="username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">password</span>
+            <input type="text" placeholder="Enter your password" [(ngModel)]="passwordh" name="password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Location</span>
+            <input type="text" placeholder="Enter your Location" [(ngModel)]="locationh" name="location" required>
+          </div>
+          <div class="input-box">
+            <span class="details">phone number</span>
+            <input type="text" placeholder="Enter your phone number" [(ngModel)]="phonen" name="phone" required>
+          </div> 
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
